@@ -1,0 +1,9 @@
+{
+	"name": "user",
+	"pass": "secret",
+	"d": [
+		"1", false, 2, 3.3, {
+			"a": "b"
+		}
+	]
+}
