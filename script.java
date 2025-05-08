@@ -13,14 +13,17 @@ static <T> void println(T arg) {
 }
 
 void main() throws IOException{
+	println("INFO: json map");
 	var json = loadJson();
 	// {name=user, pass=secret, d=[1, false, 2, 3.3, {a=b}]}
 	println(json);
 	println(json.get("name"));
 
+	println("INFO: json tree");
 	var jsonTree = loadJsonNode();
+	println(jsonTree);
 	println(jsonTree.get("pass").asText());
-	
+
 	println("INFO: done");
 }
 
