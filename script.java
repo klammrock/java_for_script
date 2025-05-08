@@ -8,16 +8,20 @@ private static final String IN_FILE_NAME = "data.json";
 
 private static final ObjectMapper mapper = new ObjectMapper();
 
+static <T> void println(T arg) {
+	System.out.println(arg);
+}
+
 void main() throws IOException{
 	var json = loadJson();
 	// {name=user, pass=secret, d=[1, false, 2, 3.3, {a=b}]}
-	System.out.println(json);
-	System.out.println(json.get("name"));
+	println(json);
+	println(json.get("name"));
 
 	var jsonTree = loadJsonNode();
-	System.out.println(jsonTree.get("name").asText());
+	println(jsonTree.get("pass").asText());
 	
-	System.out.println("done");
+	println("INFO: done");
 }
 
 Map loadJson() throws IOException{
